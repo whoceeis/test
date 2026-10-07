@@ -1,0 +1,158 @@
+.admin {
+  padding: 0 1.22rem 2rem;
+}
+
+.admin__login,
+.admin__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.94rem;
+  margin-top: max(2.5rem, calc(env(safe-area-inset-top) + 1.5rem));
+}
+
+.admin__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.admin__subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.19rem;
+  font-weight: 700;
+}
+
+.admin__link {
+  color: var(--color-link);
+  font-size: 1.125rem;
+}
+
+.admin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.admin__label {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* ---------- Выданный код ---------- */
+.code-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.09rem;
+  border: 1px solid #acc7f1;
+  border-radius: var(--radius-field);
+  background: #f2f7fd;
+}
+
+.code-box__title {
+  color: var(--color-text-secondary);
+  font-size: 1.06rem;
+}
+
+.code-box__code {
+  display: block;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  user-select: all;
+}
+
+.code-box__hint {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- Список пользователей ---------- */
+.users {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user {
+  padding: 0.94rem 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.user__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.user__name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.user__status {
+  flex: none;
+  padding: 0.16rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+.user__status--pending {
+  background: #fff1d9;
+  color: #8a5a00;
+}
+
+.user__status--active {
+  background: #e4f9d7;
+  color: #49a700;
+}
+
+.user__status--revoked {
+  background: var(--color-field);
+  color: var(--color-text-secondary);
+}
+
+.user__meta {
+  margin-top: 0.34rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.user__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.user__btn {
+  height: 2.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid #acc7f1;
+  border-radius: 0.78rem;
+  color: #126dc0;
+  font-size: 1rem;
+}
+
+.user__btn--danger {
+  border-color: #f6c2bd;
+  color: var(--color-accent);
+}
+
+.users__empty {
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+}

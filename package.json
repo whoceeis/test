@@ -1,0 +1,17 @@
+{
+  "name": "kaspi-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Мобильное приложение: вёрстка и бэкенд (доступ по одноразовому коду, фото документа)",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --watch --env-file-if-exists=.env server/index.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

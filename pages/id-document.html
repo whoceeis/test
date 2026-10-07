@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-title" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <title>Удостоверение личности</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/id-document.css">
+  <script src="/js/no-zoom.js"></script>
+</head>
+<body>
+  <div class="splash" id="splash" role="status" aria-label="Загрузка">
+    <img class="splash__logos" src="/assets/loading/logos.png" alt="" width="357" height="143">
+  </div>
+
+  <div class="app app--flat app--no-tabbar app--screen">
+    <header class="nav-header">
+      <a class="nav-header__back" href="/pages/gosuslugi.html" aria-label="Назад"></a>
+      <h1 class="nav-header__title">Удостоверение личности</h1>
+    </header>
+
+    <div class="id-tabs" id="id-tabs" role="tablist" aria-label="Раздел документа">
+      <span class="id-tabs__pill" aria-hidden="true"></span>
+      <button class="id-tabs__item" id="tab-document" type="button" role="tab" aria-controls="panel-document" aria-selected="true">Документ</button>
+      <button class="id-tabs__item" id="tab-details" type="button" role="tab" aria-controls="panel-details" aria-selected="false" tabindex="-1">Реквизиты</button>
+    </div>
+
+    <main class="pager" id="pager">
+      <section class="panel panel--document" id="panel-document" role="tabpanel" aria-labelledby="tab-document">
+        <div class="document">
+          <label class="document__frame" id="photo-frame">
+            <input class="visually-hidden" id="photo-input" type="file" accept="image/jpeg,image/png,image/webp">
+            <img class="document__photo" id="photo" alt="Фото удостоверения личности" hidden>
+            <span class="document__hint" id="photo-hint">
+              <span class="document__plus" aria-hidden="true">+</span>
+              <span>Нажмите, чтобы загрузить фото документа</span>
+            </span>
+            <span class="document__status" id="photo-status" role="status" hidden></span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn--primary" href="#">
+            <img class="btn__icon" src="/assets/id/icon-present.svg" alt="" width="56" height="56">
+            <span>Предъявить документ</span>
+          </a>
+          <a class="btn btn--outline" href="#">
+            <img class="btn__icon" src="/assets/id/icon-send.svg" alt="" width="56" height="56">
+            <span>Отправить документ</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel panel--details" id="panel-details" role="tabpanel" aria-labelledby="tab-details" inert>
+        <ul class="fields">
+          <li class="field">
+            <label class="field__label" for="field-fio">ФИО</label>
+            <input class="field__value" id="field-fio" name="fio" type="text" value="Санжаров Санжар Санжарович"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать ФИО">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+          <li class="field">
+            <label class="field__label" for="field-iin">ИИН</label>
+            <input class="field__value" id="field-iin" name="iin" type="text" value="777777777777"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать ИИН">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+          <li class="field">
+            <label class="field__label" for="field-birthDate">Дата рождения</label>
+            <input class="field__value" id="field-birthDate" name="birthDate" type="text" value="09.09.2009"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать дату рождения">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+          <li class="field">
+            <label class="field__label" for="field-documentNumber">Номер документа</label>
+            <input class="field__value" id="field-documentNumber" name="documentNumber" type="text" value="059035568"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать номер документа">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+          <li class="field">
+            <label class="field__label" for="field-issueDate">Дата выдачи</label>
+            <input class="field__value" id="field-issueDate" name="issueDate" type="text" value="23.09.2024"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать дату выдачи">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+          <li class="field">
+            <label class="field__label" for="field-expiryDate">Срок действия</label>
+            <input class="field__value" id="field-expiryDate" name="expiryDate" type="text" value="22.09.2034"
+                   maxlength="120" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
+            <button class="field__copy" type="button" aria-label="Копировать срок действия">
+              <img src="/assets/id/icon-copy.svg" alt="" width="53" height="53">
+            </button>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn" href="#">
+            <img class="btn__icon" src="/assets/id/icon-send-details.svg" alt="" width="58" height="58">
+            <span>Отправить реквизиты</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- id-document.js: фото документа; id-zoom.js: увеличение фото; id-details.js: сохранение полей; id-pager.js: вкладки и свайп -->
+  <script src="/js/id-document.js" defer></script>
+  <script src="/js/id-zoom.js" defer></script>
+  <script src="/js/id-details.js" defer></script>
+  <script src="/js/id-pager.js" defer></script>
+</body>
+</html>

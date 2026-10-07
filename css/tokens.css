@@ -1,0 +1,36 @@
+/*
+  Единицы: 1rem = 32px макета Figma.
+  Макет нарисован в 2x (экран 952px = 476 CSS px), поэтому значения из Figma
+  делим на 32: 40px -> 1.25rem, 128px -> 4rem.
+  Корневой размер шрифта (base.css) масштабируется с шириной экрана.
+*/
+:root {
+  --app-width: 29.75rem;
+
+  --color-page: #f2f2f2;
+  --color-surface: #fff;
+  --color-field: #f1f1f1;
+  --color-tile: #f2f2f2;
+  --color-icon-bg: #f4f4f4;
+  --color-icon-bg-soft: #fafafa;
+  --color-divider: #f1f1f1;
+  --color-divider-soft: #f2f2f2;
+
+  --color-text: #202020;
+  --color-text-muted: #999;
+  --color-text-secondary: #808080;
+  --color-placeholder: #cecece;
+  --color-placeholder-icon: #bcbcbc;
+  --color-chevron: #c4c4c4;
+  --color-link: #007aca;
+
+  --color-accent: #fa4739;
+  --color-badge: #fa473a;
+  --color-nav-active: #f44335;
+
+  --font-main: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  --radius-card: 1.06rem;
+  --radius-field: 0.94rem;
+  --gap-section: 0.59rem;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-title" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <title>Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+  <script src="/js/no-zoom.js"></script>
+</head>
+<body>
+  <div class="app app--flat">
+    <div class="search-row">
+      <form class="search-field" role="search" action="#" method="get">
+        <span class="search-field__icon" aria-hidden="true"></span>
+        <input class="search-field__input" type="search" name="q" placeholder="Поиск по Kaspi.kz" autocomplete="off" aria-label="Поиск по Kaspi.kz">
+        <button class="search-field__camera" type="button" aria-label="Поиск по фото">
+          <img src="/assets/home/icon-camera.svg" alt="" width="55" height="55">
+        </button>
+      </form>
+      <a class="cart-link" href="#" aria-label="Корзина">
+        <img src="/assets/home/cart.png" alt="" width="64" height="69">
+      </a>
+    </div>
+
+    <a class="banner" href="#">
+      <img src="/assets/home/banner.png" alt="Рекламный баннер">
+    </a>
+
+    <ul class="quick">
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--shop" src="/assets/home/icon-shop.png" alt="">
+        <span>Магазин</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--bank" src="/assets/home/icon-bank.png" alt="">
+        <span>Мой Банк</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--payments" src="/assets/home/icon-payments.png" alt="">
+        <span>Платежи</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--transfers" src="/assets/home/icon-transfers.png" alt="">
+        <span>Переводы</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--magnum" src="/assets/home/icon-magnum.svg" alt="">
+        <span>Magnum</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--travel" src="/assets/home/icon-travel.png" alt="">
+        <span>Travel</span>
+      </a></li>
+      <li><a class="quick__item" href="/pages/gosuslugi.html">
+        <img class="quick__icon--gov" src="/assets/home/icon-gov.png" alt="">
+        <span>Госуслуги</span>
+      </a></li>
+      <li><a class="quick__item" href="#">
+        <img class="quick__icon--work" src="/assets/home/icon-work.png" alt="">
+        <span>Работа</span>
+      </a></li>
+    </ul>
+
+    <a class="partner" href="#">
+      <span class="partner__logo"><img src="/assets/home/glovo.svg" alt=""></span>
+      <span class="partner__body">
+        <span class="partner__title">
+          <span>Glovo</span>
+          <span class="partner__cashback">10% Б</span>
+        </span>
+        <span class="partner__desc">Сервис доставки еды</span>
+      </span>
+    </a>
+
+    <div class="promo">
+      <ul class="promo__grid">
+        <li><a class="promo__item" href="#">
+          <span class="promo__image"><img src="/assets/home/promo-installment.svg" alt=""></span>
+          <span class="promo__text promo__text--center">Рассрочка 0-0-12</span>
+        </a></li>
+        <li><a class="promo__item" href="#">
+          <span class="promo__image"><img src="/assets/home/promo-credit.svg" alt=""></span>
+          <span class="promo__text">
+            <span>Кредит</span>
+            <span class="promo__sub">до 2,2 млн</span>
+          </span>
+        </a></li>
+        <li><a class="promo__item" href="#">
+          <span class="promo__image"><img src="/assets/home/promo-red.svg" alt=""></span>
+          <span class="promo__text promo__text--plain">
+            <span>Kaspi Red+</span>
+            <span class="promo__sub">Рассрочка до 500 000 ₸</span>
+          </span>
+        </a></li>
+        <li><a class="promo__item" href="#">
+          <span class="promo__image"><img src="/assets/home/promo-deposit.svg" alt=""></span>
+          <span class="promo__text promo__text--plain">Накопительный<br>Депозит</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <section class="recent" aria-labelledby="recent-title">
+      <h2 class="recent__title" id="recent-title">Вы недавно смотрели</h2>
+      <ul class="recent__list">
+        <li><a class="product" href="#">
+          <span class="product__image product__image--poco">
+            <img src="/assets/home/product-poco.png" alt="POCO M8 Pro">
+            <span class="product__bonus">8 249 Б</span>
+          </span>
+          <span class="product__price">274 990 ₸</span>
+          <span class="product__installment">266 741 ₸</span>
+        </a></li>
+        <li><a class="product" href="#">
+          <span class="product__image product__image--headphones">
+            <img src="/assets/home/product-headphones.png" alt="Наушники">
+            <span class="product__bonus">449 Б</span>
+          </span>
+          <span class="product__price">14 990 ₸</span>
+          <span class="product__installment">14 541 ₸</span>
+        </a></li>
+        <li><a class="offer" href="#">
+          <span class="offer__image offer__image--honor">
+            <img src="/assets/home/offer-honor.png" alt="HONOR 600 Pro">
+            <span class="offer__badge">15 930 Б</span>
+          </span>
+          <span class="offer__price">531 020 ₸</span>
+          <span class="offer__bonus">
+            <strong>515 090 ₸</strong>
+            <span>с учетом Бонусов</span>
+          </span>
+          <span class="offer__name">HONOR 600 Pro ...</span>
+          <span class="offer__rating">
+            <strong>5.0</strong>
+            <img src="/assets/home/icon-star.png" alt="" width="15" height="14">
+            <span>(12)</span>
+          </span>
+        </a></li>
+        <li><a class="offer" href="#">
+          <span class="offer__image offer__image--sherway">
+            <img src="/assets/home/offer-sherway.png" alt="Чехол SherWay">
+            <span class="offer__brand">SherWay</span>
+          </span>
+          <span class="offer__price">499 ₸</span>
+          <span class="offer__name">Чехол SherWay ...</span>
+          <span class="offer__rating">
+            <strong>4.9</strong>
+            <img src="/assets/home/icon-star.png" alt="" width="15" height="14">
+            <span>(42)</span>
+          </span>
+        </a></li>
+        <li><a class="offer" href="#">
+          <span class="offer__image offer__image--apple">
+            <img src="/assets/home/offer-apple-case.png" alt="S&amp;M для Apple">
+            <span class="offer__badge">🔥 249 Б</span>
+          </span>
+          <span class="offer__price">4 995 ₸</span>
+          <span class="offer__bonus">
+            <strong>4 746 ₸</strong>
+            <span>с учетом Бонусов</span>
+          </span>
+          <span class="offer__name">S&amp;M для Apple i...</span>
+          <span class="offer__rating offer__rating--none">Нет рейтинга</span>
+        </a></li>
+      </ul>
+    </section>
+
+    <section class="feed" aria-labelledby="feed-title">
+      <h2 class="feed__title" id="feed-title">Выгодные предложения</h2>
+      <div class="feed__tabs" role="tablist" aria-label="Подборки">
+        <button class="feed__tab feed__tab--active" type="button" role="tab" aria-selected="true">Рекомендации</button>
+        <button class="feed__tab" type="button" role="tab" aria-selected="false">
+          <img src="/assets/home/icon-discount.png" alt="" width="21" height="20">
+          <span>Скидки</span>
+        </button>
+        <button class="feed__tab" type="button" role="tab" aria-selected="false">
+          <img src="/assets/home/icon-bonus.png" alt="" width="18" height="22">
+          <span>Бонусы</span>
+        </button>
+      </div>
+
+      <ul class="feed__grid">
+        <li><a class="ad-card" href="#">
+          <span class="ad-card__image ad-card__image--hydra">
+            <img src="/assets/home/ad-hydra.png" alt="HYDRA Home Razor R7">
+            <button class="ad-card__favorite" type="button" aria-label="В избранное">
+              <img src="/assets/home/icon-favorite.svg" alt="" width="28" height="27">
+            </button>
+            <span class="ad-card__badges">
+              <span class="ad-card__bonus">9 750 Б</span>
+              <span class="ad-card__installment">0 • 0 • 24</span>
+            </span>
+          </span>
+          <span class="ad-card__dots" aria-hidden="true"><span>•</span>•••••</span>
+          <span class="ad-card__body">
+            <span class="ad-card__label">Реклама</span>
+            <span class="ad-card__price">325 000 ₸</span>
+            <span class="ad-card__bonus-box">
+              <strong>315 250 ₸</strong>
+              <span>с учетом Бонусов</span>
+            </span>
+            <span class="ad-card__name">HYDRA Home Razor R7 15.6"<br>/ 16 Гб / SSD 512 Гб / Win 1...</span>
+            <span class="ad-card__rating">
+              <strong>4.9</strong>
+              <img src="/assets/home/icon-star.png" alt="" width="15" height="14">
+              <span>(339)</span>
+            </span>
+            <span class="ad-card__credit">
+              <strong>13 542 ₸</strong>
+              <span>x24</span>
+            </span>
+          </span>
+        </a></li>
+        <li><a class="ad-card" href="#">
+          <span class="ad-card__image ad-card__image--lenovo">
+            <img src="/assets/home/ad-lenovo.png" alt="Lenovo LOQ 15IAX9">
+            <span class="ad-card__intel" aria-hidden="true">
+              <span class="ad-card__intel-brand">intel.</span>
+              <span class="ad-card__intel-core">CORE</span>
+              <span class="ad-card__intel-model">i5</span>
+            </span>
+            <button class="ad-card__favorite" type="button" aria-label="В избранное">
+              <img src="/assets/home/icon-favorite-on-photo.svg" alt="" width="28" height="27">
+            </button>
+            <span class="ad-card__badges">
+              <span class="ad-card__bonus">22 451 Б</span>
+              <span class="ad-card__installment">0 • 0 • 24</span>
+            </span>
+          </span>
+          <span class="ad-card__dots" aria-hidden="true"><span>•</span>•••••</span>
+          <span class="ad-card__body">
+            <span class="ad-card__label">Реклама</span>
+            <span class="ad-card__price">748 370 ₸</span>
+            <span class="ad-card__bonus-box">
+              <strong>725 919 ₸</strong>
+              <span>с учетом Бонусов</span>
+            </span>
+            <span class="ad-card__name">Lenovo LOQ 15IAX9 15.6" / 24<br>Гб / SSD 512 Гб / Без ОС /...</span>
+            <span class="ad-card__rating">
+              <strong>4.9</strong>
+              <img src="/assets/home/icon-star.png" alt="" width="15" height="14">
+              <span>(92)</span>
+            </span>
+            <span class="ad-card__credit">
+              <strong>31 183 ₸</strong>
+              <span>x24</span>
+            </span>
+          </span>
+        </a></li>
+      </ul>
+    </section>
+  </div>
+
+  <nav class="tabbar" aria-label="Основная навигация">
+    <a class="tabbar__item" href="/" aria-current="page">
+      <img class="tabbar__icon tabbar__icon--home" src="/assets/common/nav-home-active.png" alt="">
+      <span>Главная</span>
+    </a>
+    <a class="tabbar__item" href="#">
+      <img class="tabbar__icon tabbar__icon--qr" src="/assets/common/nav-qr.png" alt="">
+      <span>Kaspi QR</span>
+    </a>
+    <a class="tabbar__item" href="/pages/messages.html">
+      <img class="tabbar__icon tabbar__icon--messages" src="/assets/common/nav-messages.png" alt="">
+      <span>Сообщения</span>
+    </a>
+    <a class="tabbar__item" href="/pages/services.html">
+      <img class="tabbar__icon tabbar__icon--services" src="/assets/common/nav-services.svg" alt="" width="53" height="53">
+      <span>Сервисы</span>
+    </a>
+  </nav>
+</body>
+</html>

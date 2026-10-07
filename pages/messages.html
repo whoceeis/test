@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-title" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <title>Сообщения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/messages.css">
+  <script src="/js/no-zoom.js"></script>
+</head>
+<body>
+  <div class="app app--flat">
+    <h1 class="page-title">Сообщения</h1>
+
+    <main>
+      <ul class="messages">
+        <li><a class="message" href="#">
+          <span class="message__avatar message__avatar--gold">
+            <img src="/assets/messages/kaspi-gold.png" alt="" width="88" height="69">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Kaspi Gold</span>
+              <span class="message__date">Вчера</span>
+            </span>
+            <span class="message__text">Покупка: 3 250 ₸<br>FOOD SOLUTIONS KZ RESTAU...</span>
+          </span>
+        </a></li>
+        <li><a class="message" href="#">
+          <span class="message__avatar message__avatar--glovo">
+            <img src="/assets/messages/glovo.svg" alt="" width="88" height="68">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Glovo</span>
+              <span class="message__date">Вчера</span>
+            </span>
+            <span class="message__text">За первый заказ в Glovo<br>на Kaspi.kz 🍟</span>
+          </span>
+        </a></li>
+        <li><a class="message" href="#">
+          <span class="message__avatar message__avatar--promo">
+            <img src="/assets/messages/gift.svg" alt="" width="55" height="55">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Акции</span>
+              <span class="message__date">28.09.2026</span>
+            </span>
+            <span class="message__text">Уже в продаже на Kaspi.kz!<br>Оформляйте в рассрочку 0-...</span>
+          </span>
+        </a></li>
+        <li><a class="message" href="#">
+          <span class="message__avatar message__avatar--payments">
+            <img src="/assets/messages/payments.svg" alt="" width="57" height="55">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Платежи</span>
+              <span class="message__date">28.09.2026</span>
+            </span>
+            <span class="message__text">Avtobys. Оплата проезда по<br>номеру транспорта</span>
+          </span>
+        </a></li>
+        <li><a class="message message--short" href="#">
+          <span class="message__avatar message__avatar--shop">
+            <img src="/assets/messages/shop.svg" alt="" width="61" height="58">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Магазин на Kaspi.kz</span>
+              <span class="message__date">31.08.2026</span>
+            </span>
+            <span class="message__text">Креатин с доставкой 👉</span>
+          </span>
+        </a></li>
+        <li><a class="message" href="#">
+          <span class="message__avatar message__avatar--chat">
+            <img src="/assets/messages/chat.svg" alt="" width="55" height="55">
+          </span>
+          <span class="message__body">
+            <span class="message__head">
+              <span class="message__title">Чат с Kaspi Гид</span>
+              <span class="message__date">20.07.2025</span>
+            </span>
+            <span class="message__text">Руслан: После того как<br>продавец подтвердит возвр...</span>
+          </span>
+        </a></li>
+      </ul>
+    </main>
+  </div>
+
+  <nav class="tabbar" aria-label="Основная навигация">
+    <a class="tabbar__item" href="/">
+      <img class="tabbar__icon tabbar__icon--home-gray" src="/assets/common/nav-home.png" alt="">
+      <span>Главная</span>
+    </a>
+    <a class="tabbar__item" href="#">
+      <img class="tabbar__icon tabbar__icon--qr" src="/assets/common/nav-qr.png" alt="">
+      <span>Kaspi QR</span>
+    </a>
+    <a class="tabbar__item" href="/pages/messages.html" aria-current="page">
+      <img class="tabbar__icon tabbar__icon--messages-active" src="/assets/common/nav-messages-active.png" alt="">
+      <span>Сообщения</span>
+    </a>
+    <a class="tabbar__item" href="/pages/services.html">
+      <img class="tabbar__icon tabbar__icon--services" src="/assets/common/nav-services.svg" alt="" width="53" height="53">
+      <span>Сервисы</span>
+    </a>
+  </nav>
+</body>
+</html>

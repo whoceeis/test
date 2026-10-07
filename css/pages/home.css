@@ -1,0 +1,687 @@
+/* ---------- Поиск ---------- */
+.search-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.03rem;
+  height: 3.875rem;
+  margin-top: 5px;
+  padding: 0 1.22rem;
+}
+
+.search-field {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  gap: 0.81rem;
+  min-width: 0;
+  height: 3.22rem;
+  padding: 0 1.22rem;
+  border-radius: 0.875rem;
+  background: var(--color-field);
+}
+
+.search-field__icon {
+  position: relative;
+  flex: none;
+  width: 1.53rem;
+  height: 1.53rem;
+  border: 0.156rem solid #c3c3c3;
+  border-radius: 0.77rem;
+}
+
+.search-field__icon::after {
+  content: "";
+  position: absolute;
+  left: 1.094rem;
+  top: 1.25rem;
+  width: 0.69rem;
+  height: 0.156rem;
+  background: #c3c3c3;
+  transform: rotate(48deg);
+}
+
+.search-field__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font-size: max(16px, 1.25rem);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-field__input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.search-field__camera {
+  flex: none;
+  padding-bottom: 0.375rem;
+}
+
+.search-field__camera img {
+  width: 1.72rem;
+  height: 1.72rem;
+}
+
+.cart-link {
+  position: relative;
+  flex: none;
+  width: 2.25rem;
+  height: 2.375rem;
+}
+
+.cart-link img {
+  position: absolute;
+  left: 0.125rem;
+  top: 0.41rem;
+  width: 2rem;
+  height: 2.16rem;
+}
+
+/* ---------- Баннер ---------- */
+.banner {
+  display: block;
+  margin: 0 0.97rem;
+  aspect-ratio: 895 / 253;
+  overflow: hidden;
+  border-radius: 0.875rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Сетка разделов ---------- */
+.quick {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 4.92rem;
+  margin: 0;
+  padding: 1.56rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--color-divider-soft);
+  list-style: none;
+}
+
+.quick__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.53rem;
+  font-size: 1.09rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.quick__icon--shop { width: 2.97rem; height: 2.375rem; }
+.quick__icon--bank { width: 2.53rem; height: 2.375rem; }
+.quick__icon--payments { width: 2.47rem; height: 2.41rem; }
+.quick__icon--transfers { width: 2.375rem; height: 2.44rem; }
+.quick__icon--magnum { width: 2.47rem; height: 2.44rem; }
+.quick__icon--travel { width: 2.375rem; height: 2.47rem; }
+.quick__icon--gov { width: 2.31rem; height: 2.375rem; }
+.quick__icon--work { width: 2.375rem; height: 2.41rem; }
+
+/* ---------- Партнёр ---------- */
+.partner {
+  display: flex;
+  align-items: center;
+  gap: 0.66rem;
+  height: 5.72rem;
+  padding-left: 1.25rem;
+  border-bottom: 1px solid var(--color-divider-soft);
+  font-size: 1.09rem;
+}
+
+.partner__logo {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 3.09rem;
+  height: 3.09rem;
+  overflow: hidden;
+}
+
+.partner__logo img {
+  width: 3.03rem;
+  height: 3.09rem;
+}
+
+.partner__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.44rem;
+}
+
+.partner__title {
+  display: flex;
+  align-items: center;
+  gap: 0.26rem;
+}
+
+.partner__cashback {
+  padding: 0.16rem 0.41rem;
+  border-radius: 0.47rem;
+  background: #53a900;
+  color: #fff;
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.partner__desc {
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Рассрочка, кредит, депозит (горизонтальная прокрутка) ---------- */
+.promo {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.promo::-webkit-scrollbar {
+  display: none;
+}
+
+.promo__grid {
+  display: grid;
+  grid-template-columns: 18.44rem 13.125rem;
+  grid-template-rows: 4.375rem 4.375rem;
+  width: max-content;
+  height: 10.5rem;
+  margin: 0;
+  padding: 1.56rem 1.25rem 0;
+  list-style: none;
+}
+
+.promo__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+.promo__image {
+  flex: none;
+  width: 4rem;
+  height: 3.125rem;
+  overflow: hidden;
+  border-radius: 0.44rem;
+}
+
+.promo__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.promo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.34rem;
+  padding-top: 0.16rem;
+}
+
+.promo__text--center {
+  padding-top: 0.78rem;
+}
+
+.promo__text--plain {
+  padding-top: 0;
+}
+
+.promo__sub {
+  color: #aaa;
+  font-size: 0.94rem;
+}
+
+/* ---------- Вы недавно смотрели ---------- */
+.recent {
+  padding-top: 0.31rem;
+}
+
+.recent__title {
+  padding: 0 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.47rem;
+}
+
+.recent__list {
+  display: flex;
+  gap: 0.59rem;
+  margin: 1.25rem 0 0;
+  padding: 0 1.31rem;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.recent__list::-webkit-scrollbar {
+  display: none;
+}
+
+.product {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 7.75rem;
+}
+
+.product__image {
+  position: relative;
+  height: 7.69rem;
+  overflow: hidden;
+  border: 1px solid var(--color-divider);
+  border-radius: 0.81rem;
+}
+
+.product__image img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.product__image--poco img { left: 3.42%; width: 93.17%; }
+.product__image--headphones img { left: 0; top: 14.12%; width: 100%; height: 71.75%; }
+.product__image--honor img { left: 9.28%; width: 81.44%; }
+.product__image--case img { left: 39.44%; width: 21.12%; }
+
+.product__bonus {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.22rem 0.41rem;
+  border-top-right-radius: 0.28rem;
+  background: #50a600;
+  color: #fff;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.product__price {
+  font-size: 1.09rem;
+  font-weight: 700;
+}
+
+.product__installment {
+  padding: 0.19rem 0.31rem 0.16rem;
+  border-radius: 0.78rem;
+  background: #e4f9d7;
+  color: #49a700;
+  font-size: 0.91rem;
+  font-weight: 700;
+}
+
+/* ---------- Карточки предложений (продолжение списка «Вы недавно смотрели») ---------- */
+.offer {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 0.19rem;
+  width: 7.94rem;
+  color: #242424;
+  font-size: 0.94rem;
+  line-height: 1.31rem;
+}
+
+.offer__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  overflow: hidden;
+  border: 1px solid var(--color-divider);
+  border-radius: 0.94rem;
+}
+
+.offer__image img {
+  height: 7.75rem;
+}
+
+.offer__image--honor img { width: 6.12rem; }
+.offer__image--sherway img { width: 5.23rem; }
+.offer__image--apple img { width: 3.98rem; }
+
+.offer__badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.25rem 0.44rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+  background: #58a500;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  white-space: nowrap;
+}
+
+.offer__brand {
+  position: absolute;
+  left: 0.875rem;
+  bottom: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.offer__price {
+  padding-top: 0.19rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.offer__bonus {
+  display: flex;
+  flex-direction: column;
+  padding: 0.31rem 0.31rem 0.19rem;
+  border-radius: 0.625rem;
+  background: #e5f9d0;
+  white-space: nowrap;
+}
+
+.offer__bonus strong {
+  color: #59a400;
+  font-size: 1rem;
+}
+
+.offer__name {
+  padding-top: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.offer__rating {
+  display: flex;
+  align-items: center;
+  height: 1.375rem;
+}
+
+.offer__rating strong {
+  width: 1.38rem;
+  font-weight: 700;
+}
+
+.offer__rating img {
+  width: 0.94rem;
+  height: 0.875rem;
+  margin: 0 0.45rem 0 0.125rem;
+}
+
+.offer__rating span {
+  color: #999;
+}
+
+.offer__rating--none {
+  color: #999;
+}
+
+/* ---------- Подборки и товары ---------- */
+.feed {
+  margin-top: 0.56rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid var(--color-divider-soft);
+}
+
+.feed__title {
+  padding: 1.5rem 1.25rem 0;
+  color: #242424;
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+}
+
+.feed__tabs {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr 1fr;
+  padding: 1rem 0.94rem 0;
+}
+
+.feed__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.44rem;
+  height: 2.56rem;
+  border: 0.125rem solid #ff4538;
+  border-radius: 1.5rem;
+  color: #ff4538;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.feed__tab--active {
+  border-color: #f94133;
+  background: #f94133;
+  color: #fff;
+}
+
+.feed__grid {
+  display: grid;
+  /* minmax(0, 1fr): колонки всегда равны и не растягиваются от длинного текста */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin: 1.56rem 0 0;
+  padding: 0 0.31rem 0 0;
+  list-style: none;
+}
+
+.feed__grid > li {
+  min-width: 0;
+}
+
+.ad-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: #242424;
+}
+
+/* Квадрат через padding, а не aspect-ratio: работает во всех мобильных браузерах и WebView */
+.ad-card__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-divider-soft);
+  border-radius: 1.06rem;
+}
+
+.ad-card__image > img {
+  position: absolute;
+}
+
+.ad-card__image--hydra > img {
+  top: 0;
+  left: 0.86%;
+  width: 98.27%;
+  height: 100%;
+}
+
+.ad-card__image--lenovo > img {
+  bottom: 0.4375rem;
+  left: 0.55%;
+  width: 98.9%;
+  height: 12.375rem;
+}
+
+.ad-card__favorite {
+  position: absolute;
+  top: 1rem;
+  right: 0.94rem;
+  width: 1.75rem;
+  height: 1.69rem;
+}
+
+.ad-card__favorite img {
+  width: 100%;
+  height: 100%;
+}
+
+.ad-card__badges {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 0.125rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5625rem;
+  white-space: nowrap;
+}
+
+.ad-card__bonus {
+  padding: 0 0.5rem;
+  background: #56a600;
+  color: #fff;
+}
+
+.ad-card__installment {
+  padding: 0 0.5rem;
+  border-top-right-radius: 0.75rem;
+  background: #ffd400;
+  color: #000;
+}
+
+.ad-card__intel {
+  position: absolute;
+  top: 0.69rem;
+  right: 0.125rem;
+  display: flex;
+  flex-direction: column;
+  width: 5.31rem;
+  height: 5.56rem;
+  padding: 0.25rem 0.44rem;
+  background: #00acdc;
+  color: #fff;
+}
+
+.ad-card__intel-brand {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.ad-card__intel-core {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+}
+
+.ad-card__intel-model {
+  font-size: 1.0625rem;
+  line-height: 1.375rem;
+  text-align: right;
+}
+
+.ad-card__dots {
+  height: 1rem;
+  color: #c8c8c8;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  line-height: 0.94rem;
+  text-align: center;
+}
+
+.ad-card__dots span {
+  color: #242424;
+}
+
+.ad-card__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0 0.69rem;
+  overflow: hidden;
+}
+
+.feed__grid li:nth-child(2) .ad-card__body {
+  padding-right: 0.125rem;
+}
+
+.ad-card__label {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.44rem;
+}
+
+.ad-card__price {
+  padding-bottom: 0.19rem;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  line-height: 1.69rem;
+}
+
+.ad-card__bonus-box {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.125rem 0.31rem;
+  border-radius: 0.625rem;
+  background: #e5f9d0;
+  font-size: 0.875rem;
+  line-height: 1.31rem;
+  white-space: nowrap;
+}
+
+.ad-card__bonus-box strong {
+  color: #59a400;
+  font-size: 1rem;
+}
+
+.ad-card__name {
+  padding-top: 0.25rem;
+  font-size: 0.94rem;
+  line-height: 1.25rem;
+  white-space: nowrap;
+}
+
+.ad-card__rating {
+  display: flex;
+  align-items: center;
+  height: 1.94rem;
+  font-size: 1rem;
+}
+
+.ad-card__rating strong {
+  width: 1.5rem;
+  font-weight: 700;
+}
+
+.ad-card__rating img {
+  width: 0.94rem;
+  height: 0.875rem;
+  margin-right: 0.56rem;
+}
+
+.ad-card__rating span {
+  color: #999;
+}
+
+.ad-card__credit {
+  display: flex;
+  align-items: center;
+  gap: 0.19rem;
+  padding-top: 0.31rem;
+  font-size: 1rem;
+}
+
+.ad-card__credit strong {
+  padding: 0.25rem 0.31rem;
+  border-radius: 0.375rem;
+  background: #ffd400;
+  color: #202020;
+  font-weight: 600;
+}
+
+.ad-card__credit span {
+  color: #999;
+}

@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 16px на ширине 476px (ширина макета), от 320px до ~505px масштабируется пропорционально */
+  font-size: clamp(10.7px, 3.36vw, 17px);
+  -webkit-text-size-adjust: 100%;
+  /* Прокрутка есть, масштабирования щипком и двойным тапом нет */
+  touch-action: pan-x pan-y;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 1.25rem;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: none;
+}
+
+/* iOS приближает страницу при фокусе на поле со шрифтом меньше 16px */
+input,
+select,
+textarea {
+  font: inherit;
+  font-size: max(16px, 1.375rem);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section);
+  width: 100%;
+  max-width: var(--app-width);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  overflow-x: clip;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Белый экран без карточек-секций */
+.app--flat {
+  gap: 0;
+  background: var(--color-surface);
+}
+
+/* Экран без нижней навигации */
+.app--no-tabbar {
+  padding-bottom: 0;
+}
+
+/* Экран с контентом по центру (вход) */
+.app--center {
+  justify-content: center;
+  padding: 0 1.22rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

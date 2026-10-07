@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-title" content="Kaspi.kz">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <title>Госуслуги</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/gosuslugi.css">
+  <script src="/js/no-zoom.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topstick">
+      <div class="topbar">
+        <a class="topbar__back" href="/" aria-label="Назад">‹</a>
+        <h1 class="topbar__title">Госуслуги</h1>
+      </div>
+
+      <div class="segmented" role="tablist" aria-label="Раздел">
+        <button class="segmented__item" type="button" role="tab" aria-selected="true" data-tab="services">Все услуги</button>
+        <button class="segmented__item" type="button" role="tab" aria-selected="false" data-tab="requests">Мои заявки</button>
+      </div>
+    </header>
+
+    <div class="header">
+      <form class="searchbar" role="search" action="#" method="get">
+        <span class="searchbar__icon" aria-hidden="true"></span>
+        <input class="searchbar__input" type="search" name="q" placeholder="Поиск по Госуслугам" autocomplete="off" aria-label="Поиск по Госуслугам">
+      </form>
+    </div>
+
+    <section class="docs" aria-label="Документы">
+      <ul class="docs__list">
+        <li>
+          <a class="doc-card" href="/pages/id-document.html">
+            <span class="doc-card__image doc-card__image--id">
+              <img src="/assets/gosuslugi/doc-id.png" alt="">
+            </span>
+            <span>Удостоверение личности</span>
+          </a>
+        </li>
+        <li>
+          <a class="doc-card" href="#">
+            <span class="doc-card__image doc-card__image--passport">
+              <img src="/assets/gosuslugi/doc-passport.png" alt="">
+            </span>
+            <span>Паспорт гражданина...</span>
+          </a>
+        </li>
+      </ul>
+      <a class="docs__all" href="#">
+        <span>Все документы</span>
+        <span class="docs__all-arrow" aria-hidden="true">›</span>
+      </a>
+    </section>
+
+    <main class="catalog">
+      <div class="cats" role="tablist" aria-label="Категории услуг">
+        <button class="cat" type="button" role="tab" aria-selected="true" data-category="popular">
+          <span class="cat__icon cat__icon--popular"><img src="/assets/gosuslugi/cat-popular.png" alt=""></span>
+          <span>Популярные</span>
+        </button>
+        <button class="cat" type="button" role="tab" aria-selected="false" data-category="spravki">
+          <span class="cat__icon cat__icon--spravki"><img src="/assets/gosuslugi/cat-spravki.png" alt=""></span>
+          <span>Справки</span>
+        </button>
+        <button class="cat" type="button" role="tab" aria-selected="false" data-category="auto">
+          <span class="cat__icon cat__icon--auto"><img src="/assets/gosuslugi/cat-auto.png" alt=""></span>
+          <span>Авто</span>
+        </button>
+        <button class="cat" type="button" role="tab" aria-selected="false" data-category="housing">
+          <span class="cat__icon cat__icon--housing"><img src="/assets/gosuslugi/cat-housing.png" alt=""></span>
+          <span>Жилье</span>
+        </button>
+        <button class="cat" type="button" role="tab" aria-selected="false" data-category="family">
+          <span class="cat__icon cat__icon--empty"></span>
+          <span>Семья</span>
+        </button>
+      </div>
+
+      <section class="popular" aria-labelledby="popular-title">
+        <h2 class="popular__title" id="popular-title">Популярные и новые</h2>
+        <ul class="popular__list">
+          <li>
+            <a class="service-row service-row--first" href="#">
+              <span class="service-row__icon service-row__icon--medorg"><img src="/assets/gosuslugi/icon-medorg.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Прикрепление<br>к медорганизации</span>
+              </span>
+              <span class="badge-new">NEW</span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+          <li>
+            <a class="service-row service-row--second" href="#">
+              <span class="service-row__icon service-row__icon--check"><img src="/assets/gosuslugi/icon-check.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Проверка<br>прикрепления<br>к медорганизации</span>
+              </span>
+              <span class="badge-new">NEW</span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+          <li>
+            <a class="service-row service-row--sub" href="#">
+              <span class="service-row__icon service-row__icon--self-employed"><img src="/assets/gosuslugi/icon-self-employed.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Стать самозанятым</span>
+                <span class="service-row__sub">Открыть счет и начать принимать<br>оплату в Kaspi.kz</span>
+              </span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+          <li>
+            <a class="service-row service-row--single" href="#">
+              <span class="service-row__icon service-row__icon--car"><img src="/assets/gosuslugi/icon-car.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Переоформление автомобиля</span>
+              </span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+          <li>
+            <a class="service-row service-row--sub-short" href="#">
+              <span class="service-row__icon service-row__icon--registration"><img src="/assets/gosuslugi/icon-registration.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Прописка</span>
+                <span class="service-row__sub">Временная и постоянная</span>
+              </span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+          <li>
+            <a class="service-row service-row--single-low" href="#">
+              <span class="service-row__icon service-row__icon--license"><img src="/assets/gosuslugi/icon-license.svg" alt=""></span>
+              <span class="service-row__body">
+                <span class="service-row__name">Замена водительских прав</span>
+              </span>
+              <img class="service-row__chevron" src="/assets/gosuslugi/icon-chevron.svg" alt="" width="10" height="15">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <nav class="tabbar" aria-label="Основная навигация">
+    <a class="tabbar__item" href="/" aria-current="page">
+      <img class="tabbar__icon tabbar__icon--home" src="/assets/common/nav-home-active.png" alt="">
+      <span>Главная</span>
+    </a>
+    <a class="tabbar__item" href="#">
+      <img class="tabbar__icon tabbar__icon--qr" src="/assets/common/nav-qr.png" alt="">
+      <span>Kaspi QR</span>
+    </a>
+    <a class="tabbar__item" href="/pages/messages.html">
+      <img class="tabbar__icon tabbar__icon--messages" src="/assets/common/nav-messages.png" alt="">
+      <span>Сообщения</span>
+    </a>
+    <a class="tabbar__item" href="/pages/services.html">
+      <img class="tabbar__icon tabbar__icon--services" src="/assets/common/nav-services.svg" alt="" width="53" height="53">
+      <span>Сервисы</span>
+    </a>
+  </nav>
+</body>
+</html>
