@@ -1,0 +1,30 @@
+/*
+  Экран загрузки: пока страница не готова, виден только белый фон и тонкая красная линия сверху.
+  Класс is-loading ставит и снимает js/page-loader.js; без JS страница показывается как обычно.
+  Подключается первым в <head>, чтобы белый экран был до отрисовки остальных стилей.
+*/
+html.is-loading {
+  background: #fff;
+}
+
+/* visibility, а не display: скрытая страница всё равно грузит свои картинки и шрифты */
+html.is-loading body {
+  visibility: hidden;
+}
+
+html.is-loading::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  width: 100%;
+  height: 3px;
+  background: var(--color-accent, #fa4739);
+  transform: scaleX(var(--load-progress, 0));
+  transform-origin: left center;
+  /* время совпадает с FILL_MS в page-loader.js */
+  transition: transform 0.3s ease-out;
+  visibility: visible;
+  pointer-events: none;
+}

@@ -103,16 +103,27 @@
     }
   });
 
-  // Возврат на страницу кнопкой «назад» берёт её из кэша браузера без перезагрузки: показываем заставку заново
+  // Заставка отсчитывает свои 3 секунды заново: после экрана загрузки и при возврате кнопкой «назад»
+  // (страница тогда берётся из кэша браузера без перезагрузки)
   const splash = document.getElementById('splash');
-  window.addEventListener('pageshow', (event) => {
-    if (!event.persisted || !splash) return;
+  function restartSplash() {
+    if (!splash) return;
     splash.style.animation = 'none';
     void splash.offsetWidth;
     splash.style.animation = '';
+  }
+  document.addEventListener('pageloader:done', restartSplash);
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) restartSplash();
   });
 
-  (async () => {
+  // Экран загрузки ждёт данные и фото, чтобы они не появлялись на открытой странице
+  const photoLoaded = () => new Promise((resolve) => {
+    photo.addEventListener('load', resolve, { once: true });
+    photo.addEventListener('error', resolve, { once: true });
+  });
+
+  window.pageLoader?.hold((async () => {
     try {
       const response = await fetch('/api/me');
       if (response.status === 401) {
@@ -120,10 +131,14 @@
         return;
       }
       const me = await response.json();
-      if (me.hasPhoto) showPhoto(me.photoVersion);
       setLocked(Boolean(me.photoLocked));
+      if (me.hasPhoto) {
+        const loaded = photoLoaded();
+        showPhoto(me.photoVersion);
+        await loaded;
+      }
     } catch {
       // без связи остаётся пустая рамка с подсказкой
     }
-  })();
+  })());
 })();
